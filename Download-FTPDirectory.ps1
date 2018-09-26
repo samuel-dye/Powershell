@@ -15,7 +15,7 @@ REV INFO:
 #>
 
 # copy Veeam Files
-write-host "!!! Grabbing Veeam Files via FTP !!!"
+write-host "!!! Grabbing all files from directory via FTP !!!"
 
 
 # set FTP variables
