@@ -14,7 +14,7 @@ REV INFO:
     MOD AUTH:  N/A
 #>
 
-# copy Veeam Files
+# copying ftp files
 write-host "!!! Grabbing all files from directory via FTP !!!"
 
 
