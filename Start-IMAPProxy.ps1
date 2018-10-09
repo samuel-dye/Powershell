@@ -18,6 +18,6 @@ Get-HealthReport -Identity "$servername" | where {$_.HealthSet -eq "IMAP.Proxy"}
     if ({$_.State -ne "Online"}) {
             Set-ServerComponentState -Identity "$servername" -Component "imapproxy" -Requester "HealthAPI" -State "Active"
         }
-        else {
+        elseif ({$_.State -eq "Online"}) {
             exit
         }
