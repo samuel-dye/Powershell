@@ -16,7 +16,7 @@ Add-PSSnapin Microsoft.Exchange.Management.PowerShell.SnapIn
 # check status, and start if NOT already online
 Get-HealthReport -Identity "$servername" | where {$_.HealthSet -eq "IMAP.Proxy"}
     if ({$_.State -ne "Online"}) {
-            Set-ServerComponentState -Identity "ARJ-EXCH01" -Component "imapproxy" -Requester "HealthAPI" -State "Active"
+            Set-ServerComponentState -Identity "$servername" -Component "imapproxy" -Requester "HealthAPI" -State "Active"
         }
         else {
             exit
